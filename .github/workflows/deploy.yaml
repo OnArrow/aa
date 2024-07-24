@@ -22,7 +22,7 @@ jobs:
       # 将打包后的文件上传到服务器
       - name: 发布到服务器
         # https://github.com/easingthemes/ssh-deploy
-        uses: appleboy/scp-action@209e8c05e0492f6ed6fe8a22dfcaefb083c4cf35
+        uses: appleboy/scp-action@98930d398ce425af0148ea8a0e3295cd04fe2b7a
         with:
           host: '120.25.124.101'
           username: 'root'
