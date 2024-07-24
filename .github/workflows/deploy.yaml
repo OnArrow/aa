@@ -19,21 +19,13 @@ jobs:
         # 使用action库 action/checkout获取代码
         uses: actions/checkout@master
 
-      # 将打包后的文件上传到服务器
-      - name: 发布到服务器
-        # https://github.com/easingthemes/ssh-deploy
-        uses: easingthemes/ssh-deploy@main
+       - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.BYW_PRIVATE_KEY }}
-          # SCP参数
-          ARGS: '-avzr --delete'
-          # 服务器ip
-          REMOTE_HOST: '120.25.124.101'
-          # 用户
-          REMOTE_USER: 'root'
-          # 源目录
-          SOURCE: 'dist/'
-          # 目标地址
-          TARGET: '/var/www/html/aa'
-          SCRIPT_BEFORE: 'ls'
+          server: '120.25.124.101'
+          username: 'root'
+          password: 'qQ1764728432'
+          local-dir: 'dist/'
+          server-dir: '/var/www/html/blog'
+
+
