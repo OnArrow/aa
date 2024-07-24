@@ -28,5 +28,5 @@ jobs:
           username: 'root'
           password: 'qQ1764728432'
           port: '22'
-          source: 'dist/'
+          source: 'dist/a.html'
           target: '/var/www/html/aa'
