@@ -21,7 +21,7 @@ jobs:
         run: mkdir -p ~/.ssh
 
       - name: Ensure .ssh directory exists2
-        run: touch -p ~/.ssh/known_hosts
+        run: touch ~/.ssh/known_hosts
 
       - name: Ensure .ssh directory exists3
         run: ssh-keygen -R 120.25.124.101
