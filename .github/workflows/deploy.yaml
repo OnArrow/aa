@@ -19,6 +19,11 @@ jobs:
         # 使用action库 action/checkout获取代码
         uses: actions/checkout@master
 
+        # 项目打包
+      - name: Clear known_hosts
+        run: |
+          ssh-keygen -R 120.25.124.101
+
       # 将打包后的文件上传到服务器
       - name: 发布到服务器
         # https://github.com/easingthemes/ssh-deploy
@@ -36,4 +41,4 @@ jobs:
           SOURCE: 'dist/'
           # 目标地址
           TARGET: '/var/www/html/aa'
-          SCRIPT_BEFORE: 'ssh-keyscan -p 22 -H 120.25.124.101  >> /home/runner/.ssh/known_hosts'
+          SCRIPT_BEFORE: 'ls'
