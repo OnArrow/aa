@@ -15,13 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 项目打包
-     - name: Create known_hosts file
-        run: |
-          mkdir -p /home/runner/.ssh
-          touch /home/runner/.ssh/known_hosts
       - name: Clear known_hosts
         run: |
-          > /home/runner/.ssh/known_hosts
+          whoami
+          ssh-keygen -R 120.25.124.101
       # 获取代码
       - name: 迁出代码
         # 使用action库 action/checkout获取代码
