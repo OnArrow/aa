@@ -36,5 +36,5 @@ jobs:
           SOURCE: 'dist/'
           # 目标地址
           TARGET: '/var/www/html/aa'
-
           SCRIPT_BEFORE: 'ls'
+          SCRIPT_BEFORE_REQUIRED: true
