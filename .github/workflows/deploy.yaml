@@ -17,7 +17,7 @@ jobs:
       # 项目打包
       - name: Clear known_hosts
         run: |
-          ping 120.25.124.101
+          ssh -v root@120.25.124.101
 
       # 获取代码
       # - name: 迁出代码
