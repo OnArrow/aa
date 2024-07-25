@@ -17,7 +17,7 @@ jobs:
       # 项目打包
       - name: Clear known_hosts
         run: |
-          ssh -v root@120.25.124.101
+          cat ~/.ssh/id_rsa.pub
 
       # 获取代码
       # - name: 迁出代码
